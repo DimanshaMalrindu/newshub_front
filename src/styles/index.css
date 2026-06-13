@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Weather map pin markers */
+.weather-pin {
+  background: transparent !important;
+  border: none !important;
+}
+
+.weather-pin-inner {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: white;
+  border-radius: 20px;
+  padding: 3px 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1.5px solid #e5e7eb;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
+}
+
+.weather-pin-inner:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.weather-pin-inner.selected {
+  background: #1d4ed8;
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.15);
+}
+
+.weather-pin-inner.selected .weather-pin-temp {
+  color: white;
+}
+
+.weather-pin-emoji {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.weather-pin-temp {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1;
+}
